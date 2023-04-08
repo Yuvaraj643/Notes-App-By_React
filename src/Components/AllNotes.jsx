@@ -27,7 +27,7 @@ export default function AllNotes() {
 
   return (
     <>
-      <div className="center"><button className="home-btn" onClick={() => navigate("/")}>
+      <div className="center"><button className="home-btn" onClick={() => navigate("/") }>
         <svg
           height="36px"
           width="36px"
@@ -104,7 +104,7 @@ export default function AllNotes() {
                           }
                         ></textarea>
                       </div>
-                      <button type="submit" className="btn3" onClick={() => toast.success('Successfully edited')}>
+                      <button type="submit" className="btn3" onClick={() => toast('Note has been succesfully edited')}>
                         Save
                       </button>
                       <button
@@ -151,7 +151,7 @@ export default function AllNotes() {
                       <button
                         type="button"
                         class="btn2"
-                        onClick={() => dispatch(removeNote(index)) && toast.success('Successfully deleted')}
+                        onClick={() => dispatch(removeNote(index)) && toast.error('Successfully deleted')}
                       >
                         <svg
                           viewBox="0 0 15 17.5"

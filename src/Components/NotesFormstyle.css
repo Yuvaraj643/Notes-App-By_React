@@ -45,7 +45,8 @@ body{
 .center{
   display: flex;
   justify-content: center;
-  margin: 40px;
+  margin-bottom: 10px;
+  margin-left: 110px;
 }
 
 .img5{
@@ -72,8 +73,10 @@ body{
 }
 
 h1 {
+  margin-left: 120px;
   text-align: center;
   margin-top: 0;
+  padding: 0;
   color: rgb(30, 186, 238);
   font-family: 'Righteous', serif;
   font-size: 7em;
@@ -473,6 +476,7 @@ strong {
 
 
 .home-btn {
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -532,9 +536,9 @@ strong {
 }
 
 .row{
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  width: fit-content;
+  justify-content:space-around;
 }
 
 
@@ -580,7 +584,7 @@ strong {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .footer-text{
   margin-left: 65px;

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { addNote } from "../Redux/action";
 import "./NotesFormstyle.css";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function NotesForm() {
@@ -11,7 +11,6 @@ export default function NotesForm() {
   let [content, setContent] = useState("");
 
   const dispatch = useDispatch();
-
   const navigate = useNavigate();
 
   function handleSubmission(e) {
@@ -27,12 +26,26 @@ export default function NotesForm() {
     });
   }
 
+  function handleAllNotesClick() {
+    navigate("/allNotes");
+  }
+
   return (
     <>
       <div className="all">
         <h1>Notes App</h1>
       </div>
-
+      <div className="center">
+      <button className="btn" role="button" onClick={handleAllNotesClick}>
+        <strong>ALL NOTES</strong>
+        <div id="container-stars">
+          <div id="stars"></div>
+        </div>
+        <div id="glow">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </button></div>
       <div className="main">
         <div className="img2"></div>
         <div className="formContainer" id="animation" >
@@ -61,7 +74,7 @@ export default function NotesForm() {
             >{" "}</textarea>
             <br />
             <br />
-            <button class="btn" role="button">
+            <button className="btn" role="button">
               <strong>ADD NOTE</strong>
               <div id="container-stars">
                 <div id="stars"></div>
@@ -78,11 +91,11 @@ export default function NotesForm() {
 
       {/* Footer Scetion */}
 
-    <div className="footer">
-      <div className="text">
-      <p className="footer-text">Made with 💖 by Yuvaraj</p>
-    </div>
-    </div>
+      <div className="footer">
+        <div className="text">
+          <p className="footer-text">Made with 💖 by Yuvaraj</p>
+        </div>
+      </div>
     </>
   );
 }
